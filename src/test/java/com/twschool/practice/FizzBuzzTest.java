@@ -18,4 +18,20 @@ public class FizzBuzzTest {
         assertThat(result,is("Buzz"));
         return;
     }
+
+
+    @Test
+    public void should_return_Fizz_give_contain_3(){
+        int number = 13;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.say(number);
+
+        assertThat(result,is("Fizz"));
+        return;
+    }
+
+
+
+
 }
