@@ -10,14 +10,22 @@ public class GuessNumberGame {
     }
 
     public String   guess(String userAnswer) {
-        lefttryTimes--;
+        decreaseTryTimes();
         String result = answer.compare(userAnswer);
+        modifyStatus(result);
+        return result;
+    }
+
+    private void modifyStatus(String result) {
         if ("4A0B".equals(result)){
             gameStatus = GameStatus.SUCCEED;
         }else if (lefttryTimes == 0){
             gameStatus = GameStatus.FAILED;
         }
-        return result;
+    }
+
+    private void decreaseTryTimes() {
+        lefttryTimes--;
     }
 
     public GameStatus getStatus() {
