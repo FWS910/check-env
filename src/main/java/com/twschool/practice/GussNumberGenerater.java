@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class GussNumberGenerater {
     private String random;
+
     public String random(){
         Random r=new Random();
         int tag[]={0,0,0,0,0,0,0,0,0,0};

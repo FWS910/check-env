@@ -23,7 +23,7 @@ public class GuessNumberMain {
 
         while(true){
 
-            String str = readDataFromConsole("Please input four digit：");
+            String str = readDataFromConsole("请连续输入不重复的4个数字：");
 
             isdigit = gussNumberGenerater.isInteger(str);
             isdistinct = gussNumberGenerater.checkDifferent(str);
@@ -40,7 +40,7 @@ public class GuessNumberMain {
                 }
 
             }else{
-                System.out.println("输入有误，请重新输入四个数字");
+                System.out.println("输入有误");
             }
 
 
