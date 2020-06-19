@@ -18,21 +18,14 @@ public class MarsRover {
             if(String.valueOf(command.charAt(i)).equals("L")||String.valueOf(command.charAt(i)).equals("R")){
                 marsRoverPosition.setDirection(getDirection(marsRoverPosition.getDirection(), String.valueOf(command.charAt(i))));
             }else if (String.valueOf(command.charAt(i)).equals("M")){
-                if(marsRoverPosition.getDirection().equals("N")){
-                    marsRoverPosition.setCoordinates_Y(marsRoverPosition.getCoordinates_Y()+1);
-                }else if(marsRoverPosition.getDirection().equals("W")){
-                    marsRoverPosition.setCoordinates_X(marsRoverPosition.getCoordinates_X()-1);
-                }else if(marsRoverPosition.getDirection().equals("S")){
-                    marsRoverPosition.setCoordinates_Y(marsRoverPosition.getCoordinates_Y()-1);
-                }else if(marsRoverPosition.getDirection().equals("E")){
-                    marsRoverPosition.setCoordinates_X(marsRoverPosition.getCoordinates_X()+1);
-                }
+                marsRoverPosition.move();
             }else {
                 System.out.println("输入参数有误");
             }
         }
         return marsRoverPosition;
     }
+
     public String getDirection(String direction, String roll) {
         if (direction.equals("N") && roll.equals("L")) {
             return "W";
