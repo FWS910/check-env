@@ -12,7 +12,7 @@ public class GussNumberGeneraterTest {
     }
 
     @Test
-    public void should_return_digit_when_generate_random(){
+    public void should_return_is_digit_true_when_generate_random(){
         GussNumberGenerater gussNumberGenerater = new GussNumberGenerater();
         String result = gussNumberGenerater.random();
         boolean isdigit = gussNumberGenerater.isInteger(result);
@@ -20,7 +20,7 @@ public class GussNumberGeneraterTest {
     }
 
     @Test
-    public void should_return_digit_distinct_when_generate_random(){
+    public void should_return_is_distinct_digit_true_when_generate_random(){
         GussNumberGenerater gussNumberGenerater = new GussNumberGenerater();
         String result = gussNumberGenerater.random();
         boolean isdistinct = gussNumberGenerater.checkDifferent(result);
