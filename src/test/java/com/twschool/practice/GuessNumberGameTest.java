@@ -30,4 +30,22 @@ public class GuessNumberGameTest {
         Assert.assertEquals(GameStatus.SUCCEED,gameStatus);
     }
 
+    @Test
+    public void should_return_FAILED_when_status_after_input_1256_6_times_given_answer_1234(){
+        //given
+        Answer answer = new Answer("1234");
+        GuessNumberGame guessNumberGame = new GuessNumberGame(answer);
+
+        String result = guessNumberGame.guess("1256");
+        String result1 = guessNumberGame.guess("1256");
+        String result2 = guessNumberGame.guess("1256");
+        String result3 = guessNumberGame.guess("1256");
+        String result4 = guessNumberGame.guess("1256");
+        String result5 = guessNumberGame.guess("1256");
+
+        GameStatus gameStatus = guessNumberGame.getStatus();
+
+        Assert.assertEquals(GameStatus.FAILED,gameStatus);
+    }
+
 }

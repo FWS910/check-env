@@ -9,7 +9,7 @@ public class GuessNumberGame {
         this.answer = answer;
     }
 
-    public String  guess(String userAnswer) {
+    public String   guess(String userAnswer) {
         lefttryTimes--;
         String result = answer.compare(userAnswer);
         if ("4A0B".equals(result)){
