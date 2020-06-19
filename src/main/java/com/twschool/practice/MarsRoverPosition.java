@@ -36,13 +36,13 @@ public class MarsRoverPosition {
     }
 
     public void move() {
-        if(getDirection().equals("N")){
+        if("N".equals(getDirection())){
             setCoordinates_Y(getCoordinates_Y()+1);
-        }else if(getDirection().equals("W")){
+        }else if("W".equals(getDirection())){
             setCoordinates_X(getCoordinates_X()-1);
-        }else if(getDirection().equals("S")){
+        }else if("S".equals(getDirection())){
             setCoordinates_Y(getCoordinates_Y()-1);
-        }else if(getDirection().equals("E")){
+        }else if("E".equals(getDirection())){
             setCoordinates_X(getCoordinates_X()+1);
         }
     }
