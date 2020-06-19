@@ -3,19 +3,19 @@ package com.twschool.practice;
 public class MarsRoverPosition {
     private  int coordinates_X;
     private  int coordinates_Y;
-    private String direction;
-    public MarsRoverPosition(int coordinatesX, int coordinatesY, String direction) {
+    private Direction direction;
+    public MarsRoverPosition(int coordinatesX, int coordinatesY, Direction direction) {
         this.coordinates_X = coordinatesX ;
         this.coordinates_Y = coordinatesY;
         this.direction = direction;
     }
 
 
-    public String getDirection() {
+    public Direction getDirection() {
         return direction;
     }
 
-    public void setDirection(String direction) {
+    public void setDirection(Direction direction) {
         this.direction = direction;
     }
 
