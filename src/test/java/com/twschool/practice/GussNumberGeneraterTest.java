@@ -19,4 +19,13 @@ public class GussNumberGeneraterTest {
         Assert.assertEquals(true,isdigit);
     }
 
+    @Test
+    public void should_return_digit_distinct_when_generate_random(){
+        GussNumberGenerater gussNumberGenerater = new GussNumberGenerater();
+        String result = gussNumberGenerater.random();
+        boolean isdistinct = gussNumberGenerater.checkDifferent(result);
+        Assert.assertEquals(true,isdistinct);
+    }
+
+
 }
